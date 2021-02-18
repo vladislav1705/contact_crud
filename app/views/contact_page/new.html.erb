@@ -2,9 +2,14 @@
 <%=form_for :contact, url: contacts_path   do |f| %>
   <p>naimenovanie contacta</p>
   <%=f.text_field :name %><br>
+  <br>
 
   <p>Email contacta</p>
   <%=f.text_field :email %><br>
+  <br>
+
+  <p>dobavlenie kartinri</p>
+  <%=f.file_field :picture %>
 
   <p>comentariy contacta</p>
   <%=f.text_area :comment %>

@@ -4,6 +4,8 @@
     <td><p><%= contact.name %></p></td>
     <td><p><%= contact.email %></p></td>
     <td><p><%= contact.comment %></p></td>
+    <td><p><%=image_tag contact.picture.url unless contact.picture.url.nil?%></p></td>
+
   </tr>
   </table>
 <% end %>
