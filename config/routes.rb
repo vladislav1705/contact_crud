@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  #devise_for :installs
   root 'homepage#home'
   get 'contacts' => 'contact_page#contacts'
   post 'contacts' => 'contact_page#contacts'
