@@ -1,13 +1,12 @@
 class ContactPageController < ApplicationController
   def contacts
-    #render plain: params[:contact].inspect
-    @contact = User.new(contact_params)
+    @contact = Contact.new(contact_params)
     @contact.save
     redirect_to :list
   end
 
   def list
-    @contacts = User.all
+    @contacts = Contact.all
   end
 
   def about

@@ -1,18 +1,20 @@
-<h1>Dobavit contact</h1>
+<h1>Добавить Контакт</h1>
 <%=form_for :contact, url: contacts_path   do |f| %>
-  <p>naimenovanie contacta</p>
-  <%=f.text_field :name %><br>
+  <p>ФИО!</p>
+  <%=f.text_field(:name, {:class => 'form-control'}) %><br>
   <br>
 
-  <p>Email contacta</p>
-  <%=f.text_field :email %><br>
+  <p>Email!</p>
+  <%=f.text_field(:email, {:class => 'form-control'}) %><br>
   <br>
 
-  <p>dobavlenie kartinri</p>
-  <%=f.file_field :picture %>
+  <p>Добавление картинки!</p>
+  <%=f.file_field(:picture, {:class => 'form-control'}) %><br>
+  <br>
 
-  <p>comentariy contacta</p>
-  <%=f.text_area :comment %>
+  <p>Ваши коментарии!</p>
+  <%=f.text_area(:comment, {:class => 'form-control'}) %> <br>
+  <br>
 
-  <%=f.submit %>
+  <%=f.submit({:class => 'btn btn-success'}) %>
   <%end%>
